@@ -1,0 +1,42 @@
+{
+  "name": "tracker-network-api",
+  "description": "Client for the Tracker Network API",
+  "version": "1.0.0",
+  "author": "Sanjula Ganepola",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/SanjulaGanepola/tracker-network-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SanjulaGanepola/tracker-network-api"
+  },
+  "bugs": {
+    "url": "https://github.com/SanjulaGanepola/tracker-network-api/issues"
+  },
+  "keywords": [
+    "Tracker Network",
+    "Apex Legends",
+    "CSGO",
+    "The Division 2",
+    "Splitgate"
+  ],
+  "main": "index.js",
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "watch": "webpack --watch",
+    "webpack": "webpack --mode production",
+    "webpack:dev": "webpack --mode development",
+    "test": "npx vitest",
+    "coverage": "npx vitest run --coverage"
+  },
+  "dependencies": {
+    "axios": "^1.7.4",
+    "ts-loader": "^9.5.1"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.0.5",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
