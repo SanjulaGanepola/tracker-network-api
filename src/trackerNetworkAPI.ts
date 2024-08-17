@@ -20,9 +20,9 @@ export class TrackerNetworkAPI {
         this.apiKey = apiKey;
     }
 
-    async get(endpoint: string) {
+    async get(endpoint: string, version?: string) {
         return await axios.get(
-            `${TrackerNetworkAPI.url}/${this.version}${endpoint}`,
+            `${TrackerNetworkAPI.url}/${version ? version : this.version}${endpoint}`,
             {
                 headers: {
                     "TRN-Api-Key": this.getApiKey(),
