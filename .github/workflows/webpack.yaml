@@ -28,3 +28,6 @@ jobs:
 
       - name: Build with Webpack
         run: npm run webpack
+
+      - name: Dry Run NPM Publish
+        run: npm publish --dry-run
