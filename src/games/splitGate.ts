@@ -5,7 +5,7 @@ import { TrackerNetworkAPI } from "../trackerNetworkAPI";
  * * Publisher: 1047 Games
  * * Platforms: `steam`, `xbl`, `psn`
  */
-export class SplitGate extends TrackerNetworkAPI {
+export class Splitgate extends TrackerNetworkAPI {
     /**
      * Get a Splitgate player's profile stats.
      * 
@@ -58,17 +58,17 @@ export class SplitGate extends TrackerNetworkAPI {
      * @returns 
      */
     async getPlayerStatsSegment(platform: string, platformUserIdentifier: string, segmentType: string, queue?: string, season?: string) {
-        let endpoint = new URL(`/splitgate/standard/profile/${platform}/${platformUserIdentifier}/segments/${segmentType}`);
+        const endpoint = `/splitgate/standard/profile/${platform}/${platformUserIdentifier}/segments/${segmentType}`;
 
+        const searchParams: { [key: string]: string } = {};
         if (queue) {
-            endpoint.searchParams.append('queue', queue);
+            searchParams.queue = queue;
         }
-
         if (season) {
-            endpoint.searchParams.append('season', season);
+            searchParams.season = season;
         }
 
-        return this.get(endpoint.toString());
+        return await this.get(endpoint, undefined, searchParams);
     }
 
     /**

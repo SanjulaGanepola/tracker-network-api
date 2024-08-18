@@ -12,24 +12,24 @@ export class TrackerNetworkAPI {
         this.version = version;
     }
 
-    getApiKey() {
-        return this.apiKey;
-    }
-
-    setApiKey(apiKey: string) {
-        this.apiKey = apiKey;
-    }
-
-    async get(endpoint: string, version?: string) {
+    async get(endpoint: string, version?: string, searchParams?: { [key: string]: string }) {
         return await axios.get(
-            `${TrackerNetworkAPI.url}/${version ? version : this.version}${endpoint}`,
+            `${TrackerNetworkAPI.url}/${version ? version : this.version}${endpoint}${searchParams ? new URLSearchParams(searchParams).toString() : ""}`,
             {
                 headers: {
-                    "TRN-Api-Key": this.getApiKey(),
+                    "TRN-Api-Key": this.apiKey,
                     "Accept": "application/json",
                     "Accept-Encoding": "gzip"
                 }
             }
         );
+    }
+
+    public getVersion() {
+        return this.version;
+    }
+
+    public getApiKey() {
+        return this.apiKey;
     }
 }
