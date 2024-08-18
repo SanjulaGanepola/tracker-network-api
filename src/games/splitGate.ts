@@ -1,5 +1,10 @@
 import { TrackerNetworkAPI } from "../trackerNetworkAPI";
 
+/**
+ * Splitgate API
+ * * Publisher: 1047 Games
+ * * Platforms: `steam`, `xbl`, `psn`
+ */
 export class SplitGate extends TrackerNetworkAPI {
     /**
      * Get a Splitgate player's profile stats.

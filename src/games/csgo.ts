@@ -1,5 +1,10 @@
 import { TrackerNetworkAPI } from "../trackerNetworkAPI";
 
+/**
+ * CS:GO API
+ * * Publisher: Valve
+ * * Platforms: `steam`
+ */
 export class Csgo extends TrackerNetworkAPI {
     /**
      * Get a CSGO player's profile stats.
