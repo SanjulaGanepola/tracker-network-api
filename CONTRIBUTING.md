@@ -1,4 +1,4 @@
-Contributing to Tracker Network API
+# Contributing to Tracker Network API
 
 Thank you for considering contributing to the Tracker Network API.
 
