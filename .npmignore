@@ -1,0 +1,12 @@
+.github
+.vscode
+node_modules
+src
+test
+coverage
+.env
+.env.sample
+tsconfig.json
+webpack.config.js
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
