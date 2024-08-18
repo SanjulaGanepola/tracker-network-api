@@ -13,7 +13,7 @@ Listed below are the currently supported game APIs:
 * [The Division 2](https://tracker.gg/developers/docs/titles/division-2)
 * [Splitgate](https://tracker.gg/developers/docs/titles/splitgate)
 
-> [!IMPORTANT]
+> [!TIP]
 > If you would like to request support for another game, refer to the official issue tracker [here](https://github.com/TrackerNetwork/TRN.Developers/issues) which is managed by the developers of Tracker Network.
 
 ## Installation
