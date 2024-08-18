@@ -1,17 +1,20 @@
-name: Webpack
+name: Publish to NPM
 
 on:
   workflow_dispatch:
 
-  push:
-    branches: ["main"]
-
-  pull_request:
-    branches: ["main"]
+  release:
+    types: [created]
 
 jobs:
-  build:
+  publish:
+    name: Publish
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
 
     steps:
       - name: Checkout
@@ -27,4 +30,9 @@ jobs:
         run: npm install
 
       - name: Build with Webpack
-        run: npx webpack
+        run: npm run webpack
+
+      - name: Publish Types to NPM
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
