@@ -32,6 +32,12 @@ jobs:
       - name: Build with Webpack
         run: npm run webpack
 
+      - name: Run Tests
+        run: npm run test
+
+      - name: Generate Code Coverage Report
+        run: npm run coverage
+
       - name: Publish Types to NPM
         run: npm publish --access public
         env:
