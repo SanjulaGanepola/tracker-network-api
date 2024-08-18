@@ -1,5 +1,10 @@
 import { TrackerNetworkAPI } from "../trackerNetworkAPI";
 
+/**
+ * Apex Legends API
+ * * Publisher: Electronic Arts
+ * * Platforms: `origin`, `steam`, `xbl`, `psn`
+ */
 export class ApexLegends extends TrackerNetworkAPI {
     /**
      * Get an Apex Legends player's profile stats.
