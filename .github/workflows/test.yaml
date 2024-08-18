@@ -1,20 +1,17 @@
-name: Publish to NPM
+name: Vitest with Code Coverage Report
 
 on:
   workflow_dispatch:
 
-  release:
-    types: [created]
+  push:
+    branches: ["main"]
+
+  pull_request:
+    branches: ["main"]
 
 jobs:
-  publish:
-    name: Publish
-
+  build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
 
     steps:
       - name: Checkout
@@ -29,16 +26,8 @@ jobs:
       - name: Install NPM Dependencies
         run: npm install
 
-      - name: Build with Webpack
-        run: npm run webpack
-
       - name: Run Tests
         run: npm run test
 
       - name: Generate Code Coverage Report
         run: npm run coverage
-
-      - name: Publish Types to NPM
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
