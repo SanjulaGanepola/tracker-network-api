@@ -9,6 +9,7 @@
 
 const path = require(`path`);
 const webpack = require(`webpack`);
+const TerserPlugin = require("terser-webpack-plugin");
 
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
 
@@ -33,7 +34,7 @@ module.exports = {
   module: {
     rules: [
       // all files with a `.ts`, `.cts`, `.mts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader", options: {allowTsInNodeModules: true} }
+      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader", options: { allowTsInNodeModules: true } }
     ]
   },
   entry: {
@@ -45,6 +46,14 @@ module.exports = {
     library: {
       "type": "commonjs"
     }
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false
+      }),
+    ],
   },
   // yes, really source maps
   devtool: `source-map`

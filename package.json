@@ -29,12 +29,13 @@
     "coverage": "npx vitest run --coverage"
   },
   "dependencies": {
-    "axios": "^1.7.4",
-    "ts-loader": "^9.5.1"
+    "axios": "^1.7.4"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^2.0.5",
     "dotenv": "^16.4.5",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-loader": "^9.5.1",
     "typescript": "^5.5.4",
     "vitest": "^2.0.5",
     "webpack": "^5.93.0",
