@@ -1,4 +1,4 @@
-name: Vitest with Code Coverage Report
+name: Vitest
 
 on:
   workflow_dispatch:
