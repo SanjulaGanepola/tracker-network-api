@@ -1,6 +1,6 @@
 # Contributing to Tracker Network API
 
-Thank you for considering contributing to the Tracker Network API.
+Thank you for considering contributing to the Tracker Network API. We welcome everyone to help maintain this project so that it can be used by all developers.
 
 > [!TIP]
 > If you have any questions about contributing, open an issue [here](https://github.com/SanjulaGanepola/tracker-network-api/issues).
@@ -38,4 +38,4 @@ To debug the tests, use the actions provided by the Vitest extension in the edit
 
 ## Publishing
 
-Publishing is handled by the `Publish to NPM` GitHub workflow. Upon creating a new release on GitHub, this workflow will be triggered and a new version will be pushed to the NPM registry. This process will be initiated by code owners.
+Publishing is handled by the [Publish to NPM](https://github.com/SanjulaGanepola/tracker-network-api/actions/workflows/publish.yaml) GitHub workflow. Upon creating a new release on GitHub, this workflow will be triggered and a new version will be pushed to the NPM registry. This process will be initiated by code owners.
