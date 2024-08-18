@@ -18,7 +18,7 @@ Listed below are the currently supported game APIs:
 
 ## Installation
 
-```bash
+```sh
 npm install tracker-network-api
 ```
 
