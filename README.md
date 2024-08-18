@@ -24,7 +24,7 @@ npm install tracker-network-api
 
 ## Authentication
 
-Authenticating with the API requires first creating an application on Tracker Network to then obtain a `TRN-Api-Key`. Follow the full instructions [here](https://tracker.gg/developers/docs/authentication) for more details.
+Authenticating with the API requires first creating an application on Tracker Network to then obtain a `TRN-Api-Key`. Follow the full instructions [here](https://tracker.gg/developers/docs/getting-started) to create an app.
 
 ## Usage
 
