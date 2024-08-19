@@ -37,4 +37,8 @@ Authenticating with the API requires first creating an application on Tracker Ne
 
 ```
 
+## Maintainers
+
+* [@SanjulaGanepola](https://github.com/SanjulaGanepola)
+
 Powered By [Tracker Network](https://tracker.gg)
