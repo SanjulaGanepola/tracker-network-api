@@ -1,9 +1,9 @@
 # Tracker Network API
 
-[![Webpack](https://github.com/SanjulaGanepola/tracker-network-api/actions/workflows/webpack.yaml/badge.svg)](https://github.com/SanjulaGanepola/tracker-network-api/actions/workflows/webpack.yaml)
-[![Vitest](https://github.com/SanjulaGanepola/tracker-network-api/actions/workflows/test.yaml/badge.svg)](https://github.com/SanjulaGanepola/tracker-network-api/actions/workflows/test.yaml)
 [![NPM Version](https://img.shields.io/npm/v/tracker-network-api.svg)](https://www.npmjs.com/package/tracker-network-api)
 [![NPM Downloads](https://img.shields.io/npm/dm/tracker-network-api.svg)](https://www.npmjs.com/package/tracker-network-api)
+[![Webpack](https://github.com/SanjulaGanepola/tracker-network-api/actions/workflows/webpack.yaml/badge.svg)](https://github.com/SanjulaGanepola/tracker-network-api/actions/workflows/webpack.yaml)
+[![Vitest](https://github.com/SanjulaGanepola/tracker-network-api/actions/workflows/test.yaml/badge.svg)](https://github.com/SanjulaGanepola/tracker-network-api/actions/workflows/test.yaml)
 
 Client for the [Tracker Network API](https://tracker.gg/developers) written in Typescript.
 
