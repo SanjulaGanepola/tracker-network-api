@@ -2,6 +2,7 @@ import { TrackerNetworkAPI } from "../trackerNetworkAPI";
 
 /**
  * CS:GO API
+ * 
  * * Publisher: Valve
  * * Platforms: `steam`
  */

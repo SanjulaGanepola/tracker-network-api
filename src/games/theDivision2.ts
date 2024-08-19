@@ -2,6 +2,7 @@ import { TrackerNetworkAPI } from "../trackerNetworkAPI";
 
 /**
  * The Division 2
+ * 
  * * Publisher: Ubisoft
  * * Platforms: `ubi`, `xbl`, `psn`
  */

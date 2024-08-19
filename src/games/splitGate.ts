@@ -2,6 +2,7 @@ import { TrackerNetworkAPI } from "../trackerNetworkAPI";
 
 /**
  * Splitgate API
+ * 
  * * Publisher: 1047 Games
  * * Platforms: `steam`, `xbl`, `psn`
  */
