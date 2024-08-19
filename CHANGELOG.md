@@ -24,3 +24,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Document project maintainers
 * Fix game api ts docs
 * Set initial development release to 0.1.0
+* Temporarily disable tests when publishing
