@@ -2,6 +2,7 @@ import { TrackerNetworkAPI } from "../trackerNetworkAPI";
 
 /**
  * Apex Legends API
+ * 
  * * Publisher: Electronic Arts
  * * Platforms: `origin`, `steam`, `xbl`, `psn`
  */
