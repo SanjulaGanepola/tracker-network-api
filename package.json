@@ -1,7 +1,7 @@
 {
   "name": "tracker-network-api",
   "description": "Client for the Tracker Network API",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Sanjula Ganepola",
   "license": "Apache-2.0",
   "homepage": "https://github.com/SanjulaGanepola/tracker-network-api#readme",
