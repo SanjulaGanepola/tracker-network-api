@@ -1,5 +1,5 @@
 import * as dotenv from 'dotenv';
-import { beforeAll, describe, it } from "vitest";
+import { beforeAll, describe, expect, it } from "vitest";
 import { Csgo } from "../src/games/csgo";
 
 dotenv.config()
@@ -18,14 +18,17 @@ describe('CS:GO', () => {
     });
 
     it('getPlayerProfileStats', async () => {
-        const result = await csgo.getPlayerProfileStats("steam", "Daltoosh");
+        const result = await csgo.getPlayerProfileStats("steam", "76561198008049283");
+        expect(result.status).toEqual(200);
     });
 
     it('getPlayerStatsSegment', async () => {
-        const result = await csgo.getPlayerStatsSegment("steam", "Daltoosh", "map");
+        const result = await csgo.getPlayerStatsSegment("steam", "76561198008049283", "weapon");
+        expect(result.status).toEqual(200);
     });
 
     it('searchForPlayer', async () => {
-        const result = await csgo.searchForPlayer("steam", "Daltoosh");
+        const result = await csgo.searchForPlayer("steam", "76561198008049283");
+        expect(result.status).toEqual(200);
     });
 });
