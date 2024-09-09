@@ -1,5 +1,5 @@
 import * as dotenv from 'dotenv';
-import { beforeAll, describe, it } from "vitest";
+import { beforeAll, describe, expect, it } from "vitest";
 import { TheDivision2 } from "../src/games/theDivision2";
 
 dotenv.config()
@@ -18,10 +18,12 @@ describe('The Division 2', () => {
     });
 
     it('getPlayerProfileStats', async () => {
-        const result = await theDivision2.getPlayerProfileStats("psn", "Daltoosh");
+        const result = await theDivision2.getPlayerProfileStats("ubi", "Solivictus");
+        expect(result.status).toEqual(200);
     });
 
     it('searchForPlayer', async () => {
-        const result = await theDivision2.searchForPlayer("psn", "Daltoosh");
+        const result = await theDivision2.searchForPlayer("ubi", "Solivictus");
+        expect(result.status).toEqual(200);
     });
 });

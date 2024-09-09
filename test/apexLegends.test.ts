@@ -1,5 +1,5 @@
 import * as dotenv from 'dotenv';
-import { beforeAll, describe, it } from "vitest";
+import { beforeAll, describe, expect, it } from "vitest";
 import { ApexLegends } from "../src/games/apexLegends";
 
 dotenv.config()
@@ -19,17 +19,21 @@ describe('Apex Legends', () => {
 
     it('getPlayerProfileStats', async () => {
         const result = await apexLegends.getPlayerProfileStats("psn", "Daltoosh");
+        expect(result.status).toEqual(200);
     });
 
     it('getPlayerStatsSegment', async () => {
         const result = await apexLegends.getPlayerStatsSegment("psn", "Daltoosh", "legend");
+        expect(result.status).toEqual(200);
     });
 
     it('searchForPlayer', async () => {
         const result = await apexLegends.searchForPlayer("psn", "Daltoosh");
+        expect(result.status).toEqual(200);
     });
 
     it('getPlayerMatchHistoryBySession', async () => {
         const result = await apexLegends.getPlayerMatchHistoryBySession("psn", "Daltoosh");
+        expect(result.status).toEqual(200);
     });
 });
