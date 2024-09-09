@@ -32,11 +32,10 @@ jobs:
       - name: Build with Webpack
         run: npm run webpack
 
-      # - name: Run Tests
-      #   run: npm run test
-
-      # - name: Generate Code Coverage Report
-      #   run: npm run coverage
+      - name: Run Tests with Code Coverage
+        run: npm run coverage
+        env:
+          TRN_API_KEY: ${{ secrets.TRN_API_KEY }}
 
       - name: Publish Types to NPM
         run: npm publish --access public
