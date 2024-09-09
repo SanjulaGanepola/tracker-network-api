@@ -26,8 +26,7 @@ jobs:
       - name: Install NPM Dependencies
         run: npm install
 
-      - name: Run Tests
-        run: npm run test
-
-      - name: Generate Code Coverage Report
+      - name: Run Tests with Code Coverage
         run: npm run coverage
+        env:
+          TRN_API_KEY: ${{ secrets.TRN_API_KEY }}
