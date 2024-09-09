@@ -33,8 +33,58 @@ Authenticating with the API requires first creating an application on Tracker Ne
 
 ## Usage
 
-```ts
+Running the examples below require using your application's `TRN-Api-Key` which can be saved in a `.env` file such as:
 
+```
+TRN_API_KEY=
+```
+
+It can then be accessed using:
+
+```ts
+const apiKey = process.env.TRN_API_KEY;
+```
+
+### Apex Legends
+
+```ts
+ApexLegends apexLegends = new ApexLegends(apiKey);
+
+let result = await apexLegends.getPlayerProfileStats("psn", "Daltoosh");
+result = await apexLegends.getPlayerStatsSegment("psn", "Daltoosh", "legend");
+result = await apexLegends.searchForPlayer("psn", "Daltoosh");
+result = await apexLegends.getPlayerMatchHistoryBySession("psn", "Daltoosh");
+```
+
+### CS:GO
+
+```ts
+Csgo csgo = new Csgo(apiKey);
+
+let result = await csgo.getPlayerProfileStats("steam", "76561198008049283");
+result = await csgo.getPlayerStatsSegment("steam", "76561198008049283", "weapon");
+result = await csgo.searchForPlayer("steam", "76561198008049283");
+```
+
+### The Division 2
+
+```ts
+TheDivision2 theDivision2 = new TheDivision2(apiKey);
+
+let result = await theDivision2.getPlayerProfileStats("ubi", "Solivictus");
+result = await theDivision2.searchForPlayer("ubi", "Solivictus");
+```
+
+### Splitgate
+
+```ts
+Splitgate splitgate = new Splitgate(apiKey);
+
+let result = await splitgate.getPlayerProfileStats("steam", "76561198085274423");
+result = await splitgate.getPlayerMatches("steam", "76561198085274423");
+result = await splitgate.getMatch("steam", "5c4639d5-c1cd-4dc7-a15d-5c9d9a01480f");
+result = await splitgate.getPlayerStatsSegment("steam", "76561198085274423", "gamemode", "gamemode", "11");
+result = await splitgate.searchForPlayer("steam", "76561198085274423");
 ```
 
 ## Maintainers
